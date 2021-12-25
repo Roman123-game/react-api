@@ -14,10 +14,13 @@
  position: sticky;
   font-size: 5px;
   margin-left: auto;
-  margin-right: 2px;
+  margin-right: 1px;
+  margin-bottom: 25px;
 }
 .italic{
-  font-size: larger;
+  font-size: medium;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  padding: 3px;
+  padding: 5px;
+  border: 1px solid gray;
+  border-radius:50%;
 }
