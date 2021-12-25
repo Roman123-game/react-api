@@ -16,18 +16,15 @@ function App() {
     const responce = await axios.get(
       "https://jsonplaceholder.typicode.com/posts"
     );
-    console.log(responce.data);
     setPosts(responce.data);
   }
   function remove(event) {
-    console.log("remoove presed");
-    const afterFiter = posts.filter(
-      (value) => value.id != event.target.value
-    );
-    console.log(valueBut);
-    console.log(afterFiter);
-    setPosts(afterFiter);
+    console.log("X button presed");
+    const afterFiter = posts.filter( (value) => value.id != event.target.value );
+    console.log(event.target.value);
     setValueBut(event.target.value);
+    setPosts(afterFiter);
+   
   }
 
   return (
@@ -43,8 +40,7 @@ function App() {
           <button
           className="buttonX"
             value={post.id}
-            onClick={(event) => {
-              remove(event);  }}>
+            onClick={(event) => {remove(event);  }}>
            x
           </button>
         </div>
