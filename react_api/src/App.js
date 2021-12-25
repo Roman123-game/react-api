@@ -20,7 +20,7 @@ function App() {
   }
   function remove(event) {
     console.log("X button presed");
-    const afterFiter = posts.filter( (value) => value.id != event.target.value );
+    const afterFiter = posts.filter( value => value.id != event.target.value );
     console.log(event.target.value);
     setValueBut(event.target.value);
     setPosts(afterFiter);
