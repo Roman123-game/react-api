@@ -8,6 +8,7 @@
   border:  1px solid green;
   margin: 2px;
   display: flex;
+  background-color: lightseagreen;
 }
 .buttonX{
  padding: auto;
@@ -16,11 +17,17 @@
   margin-left: auto;
   margin-right: 1px;
   margin-bottom: 25px;
+  background-color:darkorange;
 }
 .italic{
   font-size: medium;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   padding: 5px;
   border: 1px solid gray;
-  border-radius:50%;
+  border-radius:25%;
+  background-color: blueviolet;
+}
+.pressMe{
+background-color:darkslategrey;
+color:aliceblue;
 }

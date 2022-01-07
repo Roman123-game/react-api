@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div className="App">
-      <button onClick={fetchPost}>Press me</button>
+      <button className="pressMe" onClick={fetchPost}>Press me</button>
       {posts.map((post) => (
         <div className="div"
           key={post.id}
