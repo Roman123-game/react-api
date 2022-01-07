@@ -9,6 +9,7 @@
   margin: 2px;
   display: flex;
   background-color: lightseagreen;
+  color:azure;
 }
 .buttonX{
  padding: auto;
@@ -25,8 +26,8 @@
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   padding: 5px;
   border: 1px solid gray;
-
   background-color:gold;
+  color: #430147;
 }
 .pressMe{
 background-color:lightgreen;;
