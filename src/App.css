@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  
 }
 
 .div {
@@ -19,13 +18,13 @@
   margin-right: 1px;
   margin-bottom: 25px;
   background-color:darkorange;
-  border: 1px solid;
-}
+  border: 1px solid white;
+} 
 .bold{
   font-size: medium;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   padding: 5px;
-  border: 1px solid gray;
+  border: 1px solid grey;
   background-color:gold;
   color: #430147;
 }
