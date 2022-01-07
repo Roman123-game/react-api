@@ -34,7 +34,7 @@ function App() {
         <div className="div"
           key={post.id}
         >
-         <i className="italic"> {post.id}</i>
+         <b className="bold"> {post.id}</b>
           {post.title} 
            {post.description}
           <button
