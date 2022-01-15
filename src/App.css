@@ -1,13 +1,17 @@
+
 .App {
   text-align: center;
+  
 }
 .div {
   text-align: left;
   border:  1px solid green;
   margin: 2px;
   display: flex;
-  background-color: lightseagreen;
-  color:azure;
+  background-color: khaki;
+  color:black;
+  font-family: 'Noto Sans Egyptian Hieroglyphs', sans-serif;
+  font-size: large;
 }
 .buttonX{
  padding: auto;
@@ -21,10 +25,9 @@
 } 
 .bold{
   font-size: medium;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   padding: 5px;
   border: 1px solid grey;
-  background-color:khaki;
+  background-color:lightseagreen;
   color: #430147;
 }
 .pressMe{

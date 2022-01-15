@@ -32,8 +32,7 @@ function App() {
       <button className="pressMe" onClick={fetchPost}>Press me</button>
       {posts.map((post) => (
         <div className="div"
-          key={post.id}
-        >
+          key={post.id}>
          <b className="bold"> {post.id}</b>
           {post.title} 
            {post.description}
