@@ -19,11 +19,9 @@ function App() {
     setPosts(responce.data);
   }
   function remove(event) {
-    console.log("X button presed");
-    const afterFiter = posts.filter( value => value.id != event.target.value );
-    console.log(event.target.value);
+    const afterFilter = posts.filter( value => value.id != event.target.value );
     setValueBut(event.target.value);
-    setPosts(afterFiter);
+    setPosts(afterFilter);
    
   }
 
