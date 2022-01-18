@@ -5,7 +5,6 @@ import React from "react";
 
 function App() {
   const [posts, setPosts] = useState([]);
-  const [valueBut, setValueBut] = useState();
   useMemo(() => {
     return [...posts];
   }, [posts]);
@@ -18,9 +17,8 @@ function App() {
     );
     setPosts(responce.data);
   }
-  function remove(event) {
+  function removePost(event) {
     const afterFilter = posts.filter( value => value.id != event.target.value );
-    setValueBut(event.target.value);
     setPosts(afterFilter);
    
   }
@@ -37,7 +35,7 @@ function App() {
           <button
           className="buttonX"
             value={post.id}
-            onClick={(event) => {remove(event);  }}>
+            onClick={(event) => {removePost(event)}}>
            x
           </button>
         </div>
