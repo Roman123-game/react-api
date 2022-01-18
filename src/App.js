@@ -16,6 +16,7 @@ function App() {
       "https://jsonplaceholder.typicode.com/posts"
     );
     setPosts(responce.data);
+    console.log(responce)
   }
   function removePost(event) {
     const afterFilter = posts.filter( value => value.id != event.target.value );
@@ -35,10 +36,8 @@ function App() {
           <button
           className="buttonX"
             value={post.id}
-            onClick={(event) => {removePost(event)}}>
-           x
-          </button>
-        </div>
+            onClick={(event) => {removePost(event)}}>x</button>
+</div>
       ))}
     </div>
   );

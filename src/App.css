@@ -1,37 +1,36 @@
-
 .App {
   text-align: center;
-  
 }
 .div {
   text-align: left;
-  border:  1px solid green;
+  border: 1px solid green;
   margin: 2px;
   display: flex;
   background-color: khaki;
-  color:black;
-  font-family: 'Noto Sans Egyptian Hieroglyphs', sans-serif;
+  color: black;
+  font-family: "Noto Sans Egyptian Hieroglyphs", sans-serif;
   font-size: large;
 }
-.buttonX{
- padding: auto;
- position: sticky;
-  font-size: 5px;
+.buttonX {
+  align-content: center;
+  background-color: inherit;
+  font-size: 10px;
   margin-left: auto;
   margin-right: 1px;
   margin-bottom: 25px;
-  background-color:darkorange;
-  border: 1px solid white;
-} 
-.bold{
+  width: 15px;
+  height: 15px;
+  border: none;
+}
+.bold {
   font-size: medium;
   padding: 5px;
   border: 1px solid grey;
-  background-color:lightseagreen;
+  background-color: lightseagreen;
   color: #430147;
 }
-.pressMe{
-background-color:lightgreen;;
-color:white;
-border: 1px solid;
+.pressMe {
+  background-color: lightgreen;
+  color: white;
+  border: 1px solid;
 }
