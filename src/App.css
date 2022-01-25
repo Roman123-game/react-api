@@ -2,6 +2,7 @@
   text-align: center;
 }
 .div {
+  font-size: 16px;
   text-align: left;
   border: 1px solid green;
   margin: 2px;
@@ -9,7 +10,7 @@
   background-color: khaki;
   color: black;
   font-family: "Noto Sans Egyptian Hieroglyphs", sans-serif;
-  font-size: large;
+ 
 }
 .buttonX {
   align-content: center;
