@@ -15,6 +15,7 @@
 .buttonX {
   align-content: center;
   background-color: inherit;
+  color:red;
   font-size: 10px;
   margin:0 1px 25px auto;
   width: 15px;
@@ -31,5 +32,5 @@
 .pressMe {
   background-color: lightgreen;
   color: white;
-  border: 1px solid;
+  border: 1px solid black;
 }
