@@ -13,7 +13,7 @@ function App() {
     setPosts([]);
     console.clear();
     const responce = await axios.get(
-      "https://jsonplaceholder.typicode.com/posts"
+      'https://jsonplaceholder.typicode.com/todos/1'
     );
     setPosts(responce.data);
     console.log(responce)
@@ -21,7 +21,7 @@ function App() {
   function removePost(event) {
     const afterFilter = posts.filter( value => value.id != event.target.value );
     setPosts(afterFilter);
-   
+
   }
 
   return (
@@ -31,7 +31,7 @@ function App() {
         <div className="div"
           key={post.id}>
          <b className="bold"> {post.id}</b>
-          {post.title} 
+          {post.title}
            {post.description}
           <button
           className="buttonX"
