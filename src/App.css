@@ -1,6 +1,7 @@
 .App {
   text-align: center;
-  
+  color:black;
+  font-size: x-large;
 }
 .div {
   font-size: 16px;
@@ -33,4 +34,8 @@
   background-color: lightgreen;
   color: white;
   border: 1px solid black;
+}
+.forward .backward{
+  background: none;
+
 }
