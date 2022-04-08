@@ -17,7 +17,7 @@
   align-content: center;
   background-color: inherit;
   color:red;
-  font-size: 10px;
+  font-size: 15px;
   margin:0 1px 25px auto;
   width: 15px;
   height: 15px;
@@ -35,7 +35,8 @@
   color: white;
   border: 1px solid black;
 }
-.forward .backward{
-  background: none;
-
+.forward, .backward{
+  background: lightblue;
+  width:150px;
+  border-radius: 25px;
 }

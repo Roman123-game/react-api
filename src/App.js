@@ -8,12 +8,15 @@ function App() {
   const [page,setPage] = useState(1);
   const [limit,setLimit] =useState(10);
 
+
+
 useEffect(() => {
-  console.log(page)
-  fetchPost()
+  return () => {
+    fetchPost();
+  };
 }, [page])
 
-  async function fetchPost(_limit =10, _page =page) {
+  async function fetchPost(_limit =limit, _page =page) {
     const responce = await axios.get(
       'https://jsonplaceholder.typicode.com/todos', {
         params: {
@@ -33,14 +36,21 @@ useEffect(() => {
 
   }
    function setForwardPage(){
+
    setPage(page +1);
    console.log(page)
    
    }
    function setBackwardPage(){
+     if(page <= 1){
+      console.error("no prev posts")
+   }
+   else{
     setPage(page -1);
     console.log(page)
+    
    }
+  }
   return (
     <div className="App">Lorem Ipsum Posts
       {[...posts].map((post) => (
