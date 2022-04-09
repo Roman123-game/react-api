@@ -2,6 +2,7 @@ import axios from "axios";
 import "./App.css";
 import { useState, useEffect } from "react";
 import React from "react";
+import { toBeInTheDocument } from "@testing-library/jest-dom/dist/matchers";
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -33,7 +34,10 @@ useEffect(() => {
 
      }
   function removePost(event) {
-    const afterFilter = posts.filter( value => value.id !== event.target.value );
+    console.log( posts, event.target.value);
+    const afterFilter = posts.filter( value =>value.id !== parseInt((event.target.value)));
+    // value.id !== event.target.value
+    
     setPosts(afterFilter);
 
   }

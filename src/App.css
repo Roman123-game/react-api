@@ -4,37 +4,37 @@
   font-size: x-large;
 }
 .div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   font-size: 16px;
   text-align: left;
   border: 1px solid green;
   margin: 2px;
-  display: flex;
   background-color:lightgreen;
   color: white;
   font-family: "Noto Sans Egyptian Hieroglyphs", sans-serif;
 }
 .buttonX {
-  align-content: center;
+  align-self: flex-start;
   background-color: inherit;
   color:red;
   font-size: 15px;
-  margin:0 1px 25px auto;
-  width: 15px;
-  height: 15px;
-  border: none;
+  width: fit-content;
+  margin-left:auto;
+  border:none;
 }
 .bold {
+  align-self: flex-end;
+  width: fit-content;
   font-size: medium;
   padding: 5px;
   border: 1px solid grey;
   background-color: rgb(121, 219, 214);
   color: #430147;
+
 }
-.pressMe {
-  background-color: lightgreen;
-  color: white;
-  border: 1px solid black;
-}
+
 .forward, .backward{
   background: lightblue;
   width:150px;
