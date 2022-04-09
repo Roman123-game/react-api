@@ -2,7 +2,6 @@ import axios from "axios";
 import "./App.css";
 import { useState, useEffect } from "react";
 import React from "react";
-import { toBeInTheDocument } from "@testing-library/jest-dom/dist/matchers";
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -66,14 +65,15 @@ useEffect(() => {
     
    }
   }
-  function showCurrenPost(event){
-    console.log( event.target.outerText);
-   setCurentPost(event.target.outerText);
+  async function showCurrenPost(event){
+    console.log(event);
+    const valueText =  event.target.outerText;
+    setCurentPost(valueText);
   }
   return (
     <div className="App">Lorem Ipsum Posts
       {[...posts].map((post) => (
-          <div className="div"
+          <div className="id"
             key={post.id}>
            <div className="bold" > {post.id}</div>
            <div className="title" onClick={(event)=>showCurrenPost(event)}> {post.title}</div> 

@@ -3,7 +3,7 @@
   color:black;
   font-size: x-large;
 }
-.div {
+.id {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -44,7 +44,7 @@
 .translate{
   align-items: center;
   justify-content: center;
-  border:1px solid black;
+  border:1px dashed black;
   border-radius: 25px;
   width: 400px;
   height:fit-content;
