@@ -40,3 +40,17 @@
   width:150px;
   border-radius: 25px;
 }
+
+.translate{
+  align-items: center;
+  justify-content: center;
+  border:1px solid black;
+  border-radius: 25px;
+  width: 400px;
+  height:fit-content;
+}
+.flex{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}

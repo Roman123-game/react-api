@@ -6,6 +6,7 @@ import { toBeInTheDocument } from "@testing-library/jest-dom/dist/matchers";
 
 function App() {
   const [posts, setPosts] = useState([]);
+  const [curentPost, setCurentPost] =useState();
   const [page,setPage] = useState(1);
   const [limit,setLimit] =useState(10);
   const [forwardDisabled,setForwardDisabled] = useState(false);
@@ -65,24 +66,29 @@ useEffect(() => {
     
    }
   }
+  function showCurrenPost(event){
+    console.log( event.target.outerText);
+   setCurentPost(event.target.outerText);
+  }
   return (
     <div className="App">Lorem Ipsum Posts
       {[...posts].map((post) => (
           <div className="div"
             key={post.id}>
-           <b className="bold"> {post.id}</b>
-            {post.title}
+           <div className="bold" > {post.id}</div>
+           <div className="title" onClick={(event)=>showCurrenPost(event)}> {post.title}</div> 
             <button
             className="buttonX"
               value={post.id}
               onClick={(event) => {removePost(event)}}>x</button>
         </div>))}
+        <div className = "flex">
           <button disabled={backwardDisabled} className="backward" onClick={setBackwardPage}>&#x2190;</button>
+          <div className="translate">{curentPost}</div>
           <button disabled={forwardDisabled} className="forward" onClick={setForwardPage}>&#x2192;</button>
+          </div>
     </div>
   );
 }
 
 export default App;
-
-
