@@ -66,9 +66,7 @@ useEffect(() => {
    }
   }
   async function showCurrenPost(event){
-    console.log(event);
-    const valueText =  event.target.outerText;
-    setCurentPost(valueText);
+ setCurentPost(event.target.innerText);
   }
   return (
     <div className="App">Lorem Ipsum Posts
