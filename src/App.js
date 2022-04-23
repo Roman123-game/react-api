@@ -5,7 +5,7 @@ import React from "react";
 
 function App() {
   const [posts, setPosts] = useState([]);
-  const [curentPost, setCurentPost] = useState();
+  const [curentPost, setCurentPost] = useState("Lorem Ipsum");
   const [translatedPost,setTranslatedPost] = useState();
   const [page, setPage] = useState(1);
   const [limit, setLimit] = useState(10);
@@ -63,37 +63,35 @@ function App() {
     translate();
     console.log(event.target.innerText);
   }
+
+  
     async function translate() {
-      const encodedParams = new URLSearchParams();
-      encodedParams.append("q", curentPost);
-      encodedParams.append("target", "en");
-      encodedParams.append("source", "la");
-      
+      const axios = require("axios");
       const options = {
-        method: 'POST',
-        url: 'https://google-translate1.p.rapidapi.com/language/translate/v2',
+        method: 'GET',
+        url: 'https://just-translated.p.rapidapi.com/',
+        params: {lang: 'en', text: String(curentPost)},
         headers: {
-          'content-type': 'application/x-www-form-urlencoded',
-          'Accept-Encoding': 'application/gzip',
-          'X-RapidAPI-Host': 'google-translate1.p.rapidapi.com',
+          'X-RapidAPI-Host': 'just-translated.p.rapidapi.com',
           'X-RapidAPI-Key': '1961caa73emshce7bd432426028bp14f970jsne28e0730d487'
-        },
-        data: encodedParams
+        }
       };
       
       axios.request(options).then(function (response) {
-        console.log(response.data.data.translations[0].translatedText);
-        
+        console.log(response.data.text);
+        setTranslatedPost(response.data.text);
       }).catch(function (error) {
         console.error(error);
       });
-
     }
   
 
   return (
     <div className="App">
-      Lorem Ipsum Posts
+    <h3> Lorem Ipsum Posts</h3>
+    <h3 className="map">&#x1F5FA;</h3>
+     <h6> *press on Post for translation</h6>
+      
       {[...posts].map((post) => (
         <div className="id" key={post.id}>
           <div className="bold"> {post.id}</div>
@@ -120,7 +118,7 @@ function App() {
         >
           &#x2190;
         </button>
-        <div className="translate">{curentPost}</div>
+        <div className="translate">{translatedPost}</div>
         <button
           disabled={forwardDisabled}
           className="forward"
