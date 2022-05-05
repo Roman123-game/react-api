@@ -46,7 +46,9 @@
   align-items: center;
   justify-content: center;
   border:1px dashed black;
-  border-radius: 25px;
+  border-width: 2px 4px;
+  border-radius: 40px;
+    
   width: 400px;
   height:fit-content;
 }
@@ -54,8 +56,4 @@
   display:flex;
   align-items: center;
   justify-content: center;
-}
-.map{
-  transform:scale(2.0);
-
 }

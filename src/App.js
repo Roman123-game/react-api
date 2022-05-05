@@ -8,7 +8,7 @@ function App() {
   const [curentPost, setCurentPost] = useState("Lorem Ipsum");
   const [translatedPost,setTranslatedPost] = useState();
   const [page, setPage] = useState(1);
-  const [limit, setLimit] = useState(10);
+  const [limit,setLimit] = useState(10);
   const [forwardDisabled, setForwardDisabled] = useState(false);
   const [backwardDisabled, setBackwardDisabled] = useState(false);
 
@@ -89,7 +89,7 @@ function App() {
   return (
     <div className="App">
     <h3> Lorem Ipsum Posts</h3>
-    <h3 className="map">&#x1F5FA;</h3>
+    <h1 className="map">&#x1F5FA;</h1>
      <h6> *press on Post for translation</h6>
       
       {[...posts].map((post) => (
