@@ -1,12 +1,11 @@
 .App {
   padding: 20px;
   text-align: center;
-  color:black;
+  color: black;
   font-size: x-large;
 }
-.map{
+.map {
   margin: -20px;
-  
 }
 .id {
   display: flex;
@@ -16,20 +15,23 @@
   text-align: left;
   border: 1px solid green;
   margin: 5px;
-  background-color:lightgreen;
+  background-color: lightgreen;
   color: white;
-  font-family:  sans-serif;
+  font-family: sans-serif;
   border-radius: 25px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .buttonX {
   align-self: flex-start;
-  background-color: transparent;
-  color:red;
+  background-color: lightslategray;
+  color: red;
   font-size: 15px;
   width: fit-content;
-  margin-left:auto;
-  border:none;
+  margin-top: 3px;
+  margin-right: 5px;
+  margin-left: auto;
+  border: none;
+  border-radius: 50%;
 }
 .bold {
   align-self: flex-end;
@@ -39,27 +41,29 @@
   border: 1px solid grey;
   background-color: rgb(121, 219, 214);
   color: #430147;
-border-radius:50%;
-margin-left:10px;
+  border-radius: 50%;
+  margin-left: 10px;
 }
 
-.forward, .backward{
-  background: lightblue;
-  width:150px;
+.forward,
+.backward {
+  background-color: lightslategray;
+  width: 150px;
   border-radius: 25px;
+  border:none;
 }
 
-.translate{
+.translate {
   align-items: center;
   justify-content: center;
-  border:1px dashed black;
+  border: 1px dashed black;
   border-width: 2px 4px;
   border-radius: 40px;
   width: 400px;
-  height:fit-content;
+  height: fit-content;
 }
-.flex{
-  display:flex;
+.flex {
+  display: flex;
   align-items: center;
   justify-content: center;
 }
