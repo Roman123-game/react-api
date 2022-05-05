@@ -40,12 +40,10 @@ function App() {
   function setForwardPage() {
     if (page >= 20) {
       setForwardDisabled(true);
-      console.log("forwarddisabled");
     } else {
       setForwardDisabled(false);
       setBackwardDisabled(false);
       setPage(page + 1);
-      console.log(page);
     }
   }
   function setBackwardPage() {
@@ -55,13 +53,11 @@ function App() {
       setForwardDisabled(false);
       setBackwardDisabled(false);
       setPage(page - 1);
-      console.log(page);
     }
   }
   async function showCurrenPost(event) {
     setCurentPost(event.target.innerText);
     translate();
-    console.log(event.target.innerText);
   }
 
   
@@ -77,8 +73,8 @@ function App() {
         }
       };
       
-      axios.request(options).then(function (response) {
-        console.log(response.data.text);
+     await axios.request(options).then(function (response) {
+       const afterJson =  JSON.stringify(response.data.text)
         setTranslatedPost(response.data.text);
       }).catch(function (error) {
         console.error(error);
