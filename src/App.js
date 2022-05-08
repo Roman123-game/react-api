@@ -5,7 +5,7 @@ import React from "react";
 
 function App() {
   const [posts, setPosts] = useState([]);
-  const [curentPost, setCurentPost] = useState("loading please press again");
+  const [curentPost, setCurentPost] = useState("loading... please press again");
   const [translatedPost,setTranslatedPost] = useState();
   const [page, setPage] = useState(1);
   const [limit,setLimit] = useState(10);
