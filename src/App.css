@@ -35,7 +35,7 @@
 }
 .bold {
   align-self: flex-end;
-  width: fit-content;
+  width: min-content;
   font-size: medium;
   padding: 5px;
   border: 1px solid grey;
