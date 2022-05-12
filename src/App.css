@@ -34,8 +34,8 @@
   border-radius: 50%;
 }
 .bold {
-  align-self: flex-end;
-  width: min-content;
+  align-self: center;
+  width:auto;
   font-size: medium;
   padding: 5px;
   border: 1px solid grey;
