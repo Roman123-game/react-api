@@ -84,7 +84,7 @@ function App() {
 
   return (
     <div className="App">
-    <h3> Lorem Ipsum Posts</h3>
+    <h3 className="lorem"> Lorem Ipsum Posts</h3>
     <h1 className="map">&#x1F5FA;</h1>
      <h6> *press on Post for translation</h6>
       

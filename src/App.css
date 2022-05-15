@@ -4,9 +4,18 @@
   color: black;
   font-size: x-large;
 }
-.map {
-  margin: -20px;
+.lorem{
+  margin: -10px;
 }
+.map {
+  align-items: center;
+  margin: -60px 500px;
+  font-size: 140px;
+  width: auto;
+  filter: drop-shadow(10px 5px 2px darkgrey);
+  color: lightskyblue;
+}
+
 .id {
   display: flex;
   align-items: center;
@@ -39,7 +48,7 @@
   font-size: medium;
   padding: 5px;
   border: 1px solid grey;
-  background-color: rgb(121, 219, 214);
+  background-color: lightsalmon;
   color: #430147;
   border-radius: 50%;
   margin-left: 10px;
