@@ -10,7 +10,7 @@
 .map {
   align-items: center;
   margin: -60px 500px;
-  font-size: 140px;
+  font-size: 7.1em;
   width: auto;
   filter: drop-shadow(10px 5px 2px darkgrey);
   color: lightskyblue;
@@ -30,6 +30,10 @@
   border-radius: 25px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.title::first-letter{
+  text-transform: uppercase;
+}
+
 .buttonX {
   align-self: flex-start;
   background-color: lightslategray;
@@ -70,6 +74,9 @@
   border-radius: 40px;
   width: 400px;
   height: fit-content;
+}
+.translate::first-letter{
+  text-transform: uppercase;
 }
 .flex {
   display: flex;
