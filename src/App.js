@@ -5,7 +5,7 @@ import React from "react";
 
 function App() {
   const [posts, setPosts] = useState([]);
-  const [curentPost, setCurentPost] = useState("to translate click on post");
+  const [curentPost, setCurentPost] = useState("click on post for translation");
   const [translatedPost, setTranslatedPost] = useState();
   const [page, setPage] = useState(1);
   const [limit, setLimit] = useState(10);
