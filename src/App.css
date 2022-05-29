@@ -23,7 +23,7 @@
   justify-content: space-around;
   font-size: 16px;
   text-align: left;
-  border: 1px solid green;
+  border: 1px solid lightslategray;
   margin: 5px;
   background-color: lightgreen;
   color: white;
@@ -31,6 +31,10 @@
   border-radius: 25px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.title{
+  margin-left: 5px;
+}
+
 .title::first-letter{
   text-transform: uppercase;
 }
@@ -62,6 +66,7 @@
 .forward,
 .backward {
   background-color: lightslategray;
+  border: 3px double lightgreen;
   width: 150px;
   border-radius: 25px;
   border:none;
