@@ -47,6 +47,7 @@ function App() {
     await axios
       .request(options)
       .then(function (response) {
+        console.log(response.data.text)
         setTranslatedPost(response.data.text);
       })
       .catch(function (error) {
