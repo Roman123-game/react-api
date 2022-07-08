@@ -6,7 +6,7 @@ import React from "react";
 function App() {
   const [posts, setPosts] = useState([]);
   const [curentPost, setCurentPost] = useState("click on post for translation");
-  const [translatedPost, setTranslatedPost] = useState();
+  const [translatedPost, setTranslatedPost] = useState("");
   const [page, setPage] = useState(1);
   const [limit, setLimit] = useState(10);
   const [forwardDisabled, setForwardDisabled] = useState(false);
@@ -33,26 +33,27 @@ function App() {
     setPosts(responce.data);
   }
   async function translate() {
-    const axios = require("axios");
+    const encodedParams = new URLSearchParams();
+    encodedParams.append("source_language", "la");
+    encodedParams.append("target_language", "en");
+    encodedParams.append("text", curentPost);
+    
     const options = {
-      method: "GET",
-      url: "https://just-translated.p.rapidapi.com/",
-      params: { lang: "en", text: String(curentPost) },
+      method: 'POST',
+      url: 'https://text-translator2.p.rapidapi.com/translate',
       headers: {
-        "X-RapidAPI-Host": "just-translated.p.rapidapi.com",
-        "X-RapidAPI-Key": "1961caa73emshce7bd432426028bp14f970jsne28e0730d487",
+        'content-type': 'application/x-www-form-urlencoded',
+        'X-RapidAPI-Key': '666d07c64dmshbea3d6f634623e9p1851bfjsn7ee4693455d1',
+        'X-RapidAPI-Host': 'text-translator2.p.rapidapi.com'
       },
+      data: encodedParams
     };
-
-    await axios
-      .request(options)
-      .then(function (response) {
-        console.log(response.data.text)
-        setTranslatedPost(response.data.text);
-      })
-      .catch(function (error) {
-        console.error(error);
-      });
+    
+   axios.request(options).then(function (response) {
+    setTranslatedPost(response.data.data.translatedText);
+    }).catch(function (error) {
+      console.error(error);
+    });
   }
 
   function removePost(event) {
