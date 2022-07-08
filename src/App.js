@@ -49,7 +49,7 @@ function App() {
       data: encodedParams
     };
     
-   axios.request(options).then(function (response) {
+   await axios.request(options).then(function (response) {
     setTranslatedPost(response.data.data.translatedText);
     }).catch(function (error) {
       console.error(error);
