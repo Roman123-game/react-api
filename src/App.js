@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     return fetchPost();
-  }[curentPost]);
+  },[page]);
 
   useEffect(() => {
     return translate();
