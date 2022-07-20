@@ -8,7 +8,7 @@ function App() {
   const [curentPost, setCurentPost] = useState("click on post for translation");
   const [translatedPost, setTranslatedPost] = useState("");
   const [page, setPage] = useState(1);
-  const [limit, setLimit] = useState(10);
+  const [limit] = useState(10);
   const [forwardDisabled, setForwardDisabled] = useState(false);
   const [backwardDisabled, setBackwardDisabled] = useState(false);
 
