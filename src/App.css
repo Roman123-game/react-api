@@ -14,6 +14,8 @@
   font-size: 7.1em;
   width:300px;
   filter: drop-shadow(10px 5px 2px darkgrey);
+  text-shadow: -1px 0 indigo, 0 1px indigo, 1px 0 indigo, 0 -1px indigo;
+
   color: lightskyblue;
 }
 
