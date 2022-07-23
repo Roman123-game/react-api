@@ -7,6 +7,8 @@
 
 .lorem {
   font-family: Georgia, Times, 'Times New Roman', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   margin: -20px;
 }
 
@@ -78,7 +80,7 @@
   border: 3px double lightgreen;
   width: 150px;
   border-radius: 25px;
-  font-size: large;
+  font-size:medium;
 }
 
 .backward:hover {
