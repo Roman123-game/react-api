@@ -6,7 +6,9 @@
 }
 
 .lorem {
-  margin: -8px;
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  
+  margin: -20px;
 }
 
 .map {
@@ -74,7 +76,6 @@
   border: 3px double lightgreen;
   width: 150px;
   border-radius: 25px;
-  margin-top: 20px;
   font-size: large;
 }
 
@@ -86,7 +87,6 @@
   border-radius: 40px;
   width: 400px;
   height: fit-content;
-  margin-top: 20px;
 
 }
 
