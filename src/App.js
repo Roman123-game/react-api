@@ -115,7 +115,7 @@ function App() {
           className="backward"
           onClick={setBackwardPage}
         >
-          &#x2190;
+          &#x227C;
         </button>
         <div className="translate">{translatedPost}</div>
         <button
@@ -123,7 +123,7 @@ function App() {
           className="forward"
           onClick={setForwardPage}
         >
-          &#x2192;
+         &#x227D;
         </button>
       </div>
     </div>

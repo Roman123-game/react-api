@@ -4,18 +4,19 @@
   color: black;
   font-size: x-large;
 }
-.lorem{
+
+.lorem {
   margin: -8px;
 }
+
 .map {
   text-align: center;
   align-items: center;
   margin: -40px auto;
   font-size: 7.1em;
-  width:300px;
+  width: 300px;
   filter: drop-shadow(10px 5px 2px darkgrey);
-  text-shadow: -1px 0 lightgreen, 0 1px  indigo, 1px 0 lightgreen, 0 -1px lightgreen;
-
+  text-shadow: -1px 0 lightgreen, 0 1px indigo, 1px 0 lightgreen, 0 -1px lightgreen;
   color: lightskyblue;
 }
 
@@ -26,18 +27,19 @@
   font-size: 16px;
   text-align: left;
   border: 1px solid lightslategray;
-  margin: 3px;
+  margin: 5px;
   background-color: lightgreen;
   color: white;
   font-family: sans-serif;
   border-radius: 25px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.title{
+
+.title {
   margin-left: 5px;
 }
 
-.title::first-letter{
+.title::first-letter {
   text-transform: uppercase;
 }
 
@@ -53,9 +55,10 @@
   border: none;
   border-radius: 50%;
 }
+
 .bold {
   align-self: center;
-  width:auto;
+  width: auto;
   font-size: medium;
   padding: 5px;
   border: 1px solid grey;
@@ -71,6 +74,8 @@
   border: 3px double lightgreen;
   width: 150px;
   border-radius: 25px;
+  margin-top: 20px;
+  font-size: large;
 }
 
 .translate {
@@ -81,10 +86,14 @@
   border-radius: 40px;
   width: 400px;
   height: fit-content;
+  margin-top: 20px;
+
 }
-.translate::first-letter{
+
+.translate::first-letter {
   text-transform: uppercase;
 }
+
 .flex {
   display: flex;
   align-items: center;
