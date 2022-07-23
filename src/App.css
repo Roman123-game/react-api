@@ -7,7 +7,6 @@
 
 .lorem {
   font-family: Georgia, Times, 'Times New Roman', serif;
-  
   margin: -20px;
 }
 
@@ -48,7 +47,7 @@
 .buttonX {
   align-self: flex-start;
   background-color: lightslategray;
-  color: red;
+  color: black;
   font-size: 13px;
   width: fit-content;
   margin-top: 3px;
@@ -56,6 +55,9 @@
   margin-left: auto;
   border: none;
   border-radius: 50%;
+}
+.buttonX:hover{
+  color:gold;
 }
 
 .bold {
@@ -77,6 +79,13 @@
   width: 150px;
   border-radius: 25px;
   font-size: large;
+}
+
+.backward:hover {
+color: gold;
+}
+.forward:hover{
+  color: gold;
 }
 
 .translate {
