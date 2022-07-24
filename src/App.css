@@ -108,6 +108,7 @@ color: gold;
   height: 30px;
   animation: spin 2s linear infinite;
   margin: 20px;
+  font-size: medium;
 }
 
 @keyframes spin {
