@@ -1,9 +1,9 @@
 import axios from "axios";
 import "./App.css";
 import { useState, useEffect, useCallback } from "react";
-import React from "react";
+import {memo} from "react";
 
-const App = React.memo(() => {
+const App = () => {
   const [posts, setPosts] = useState([]);
   const [curentPost, setCurentPost] = useState("click on post for translation");
   const [translatedPost, setTranslatedPost] = useState("");
@@ -130,6 +130,6 @@ const App = React.memo(() => {
       </div>
     </div>
   );
-})
+}
 
-export default App;
+export default memo(App);
