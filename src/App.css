@@ -90,7 +90,7 @@ color: gold;
   color: gold;
 }
 
-.translate {
+.translate, .loading{
   align-items: center;
   justify-content: center;
   border: 1px dashed black;
