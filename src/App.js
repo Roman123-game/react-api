@@ -119,7 +119,7 @@ function App() {
         >
           &#x227C;
         </button>
-        {togleTranslatedPost ? <div className="translate">{translatedPost}</div> : <div className="loading">Loading...</div>}
+        {togleTranslatedPost ? <div className="translate">{translatedPost}</div> : <div className="loader"></div>}
         <button
           disabled={forwardDisabled}
           className="forward"

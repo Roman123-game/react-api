@@ -90,7 +90,7 @@ color: gold;
   color: gold;
 }
 
-.translate, .loading{
+.translate{
   align-items: center;
   justify-content: center;
   border: 1px dashed black;
@@ -99,6 +99,20 @@ color: gold;
   width: 400px;
   height: fit-content;
 
+}
+.loader {
+  border: 8px solid lightgray;
+  border-top: 8px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 2s linear infinite;
+  margin: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 .translate::first-letter {
