@@ -11,6 +11,7 @@ function App() {
   const [limit] = useState(10);
   const [forwardDisabled, setForwardDisabled] = useState(false);
   const [backwardDisabled, setBackwardDisabled] = useState(false);
+  const [togleTranslatedPost, setTogleTranslatedPost] = useState(false);
 
   useEffect(() => {
     return fetchPost();
@@ -51,6 +52,7 @@ function App() {
     
    await axios.request(options).then(function (response) {
     setTranslatedPost(response.data.data.translatedText);
+    setTogleTranslatedPost(true);
     }).catch(function (error) {
       console.error(error);
     });
@@ -117,7 +119,7 @@ function App() {
         >
           &#x227C;
         </button>
-        <div className="translate">{translatedPost}</div>
+        {togleTranslatedPost ? <div className="translate">{translatedPost}</div> : <div>Loading...</div>}
         <button
           disabled={forwardDisabled}
           className="forward"
