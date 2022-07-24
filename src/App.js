@@ -1,9 +1,9 @@
 import axios from "axios";
 import "./App.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import React from "react";
 
-function App() {
+const App = React.memo(() => {
   const [posts, setPosts] = useState([]);
   const [curentPost, setCurentPost] = useState("click on post for translation");
   const [translatedPost, setTranslatedPost] = useState("");
@@ -58,15 +58,15 @@ function App() {
     });
   }
 
-  function removePost(event) {
+ const removePost = useCallback((event) =>{
     console.log(posts, event.target.value);
     const afterFilter = posts.filter(
       (value) => value.id !== parseInt(event.target.value)
     );
     setPosts(afterFilter);
-  }
+  },[posts])
 
-  function setForwardPage() {
+  const setForwardPage = useCallback(()=> {
     if (page >= 20) {
       setForwardDisabled(true);
     } else {
@@ -74,9 +74,9 @@ function App() {
       setBackwardDisabled(false);
       setPage(page + 1);
     }
-  }
+  },[page])
 
-  function setBackwardPage() {
+  const  setBackwardPage = useCallback(() => {
     if (page <= 1) {
       setBackwardDisabled(true);
     } else {
@@ -84,7 +84,7 @@ function App() {
       setBackwardDisabled(false);
       setPage(page - 1);
     }
-  }
+  },[page])
 
   return (
     <div className="App">
@@ -130,6 +130,6 @@ function App() {
       </div>
     </div>
   );
-}
+})
 
 export default App;
