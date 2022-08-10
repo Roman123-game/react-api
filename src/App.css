@@ -7,9 +7,9 @@
 
 .lorem {
   font-family: Georgia, Times, 'Times New Roman', serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+font-variant-ligatures: common-ligatures;
   margin: -20px;
+
 }
 
 .map {
@@ -101,7 +101,7 @@ color: gold;
 
 }
 .loader {
-  border: 8px solid lightgray;
+  border: 8px solid whitesmoke;
   border-top: 8px solid #3498db; /* Blue */
   border-radius: 50%;
   width: 30px;
