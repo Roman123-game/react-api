@@ -53,7 +53,7 @@ const App = () => {
    await axios.request(options).then(function (response) {
     setTranslatedPost(response.data.data.translatedText);
     setTogleTranslatedPost(true);
-    }).catch(function (error) {
+    }).catch((error)=> {
       console.error(error);
     });
   }
