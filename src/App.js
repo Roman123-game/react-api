@@ -119,7 +119,7 @@ const App = () => {
         >
           &#x227C;
         </button>
-        {togleTranslatedPost ? <div className="translate">{translatedPost}</div> : <div className="loader">&#x32EF;</div>}
+        {togleTranslatedPost ? <div className="translate">{translatedPost}</div> : <div className="loader">&#x1F5FA;</div>}
         <button
           disabled={forwardDisabled}
           className="forward"
