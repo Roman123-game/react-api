@@ -5,6 +5,7 @@ import {memo} from "react";
 
 const App = () => {
   const [posts, setPosts] = useState([]);
+  const [language, setLanguage] = useState("en")
   const [curentPost, setCurentPost] = useState("click on post for translation");
   const [translatedPost, setTranslatedPost] = useState("");
   const [page, setPage] = useState(1);
@@ -36,7 +37,7 @@ const App = () => {
   async function translate() {
     const encodedParams = new URLSearchParams();
     encodedParams.append("source_language", "la");
-    encodedParams.append("target_language", "en");
+    encodedParams.append("target_language", language);
     encodedParams.append("text", curentPost);
     
     const options = {
@@ -56,6 +57,10 @@ const App = () => {
     }).catch((error)=> {
       console.error(error);
     });
+  }
+
+  function onChaneSelect(e){
+      setLanguage(e.target.value)
   }
 
  const removePost = useCallback((event) =>{
@@ -90,7 +95,11 @@ const App = () => {
     <div className="App">
       <h3 className="lorem"> Lorem Ipsum Posts</h3>
       <h1 className="map">&#x1F5FA;</h1>
-
+       <select class="select" onChange={(e)=>onChaneSelect(e)}>
+        <option value="en">ENGLISH</option>
+        <option value="ru">RUSSIAN</option>
+        <option value="he">HEBREW</option>
+       </select>
       {[...posts].map((post) => (
         <div className="id" key={post.id}>
           <div className="bold"> {post.id}</div>

@@ -11,6 +11,12 @@ font-variant-ligatures: common-ligatures;
   margin: -20px;
 
 }
+.select{
+  margin-top: 30px;
+  padding: 5px;
+  background-color: lightgray;
+  border-radius: 25px;
+}
 
 .map {
   text-align: center;
