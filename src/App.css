@@ -14,7 +14,7 @@ font-variant-ligatures: common-ligatures;
 .select{
   margin-top: 30px;
   padding: 5px;
-  background-color: lightgray;
+  background-color:lightslategray;
   border-radius: 25px;
 }
 
@@ -81,7 +81,8 @@ font-variant-ligatures: common-ligatures;
 }
 
 .forward,
-.backward {
+.backward,
+.select{
   background-color: lightslategray;
   border: 3px double lightgreen;
   width: 150px;
@@ -89,12 +90,10 @@ font-variant-ligatures: common-ligatures;
   font-size:medium;
 }
 
-.backward:hover {
+.backward:hover,.forward:hover, select:hover {
 color: gold;
 }
-.forward:hover{
-  color: gold;
-}
+
 
 .translate{
   align-items: center;

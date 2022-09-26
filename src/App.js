@@ -95,9 +95,8 @@ const App = () => {
     <div className="App">
       <h3 className="lorem"> Lorem Ipsum Posts</h3>
       <h1 className="map">&#x1F5FA;</h1>
-       <select class="select" onChange={(e)=>onChaneSelect(e)}>
+       <select class="select" onChange={(e)=>setLanguage(e.target.value)}>
         <option value="en">ENGLISH</option>
-        <option value="ru">RUSSIAN</option>
         <option value="he">HEBREW</option>
        </select>
       {[...posts].map((post) => (
