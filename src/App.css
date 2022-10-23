@@ -6,9 +6,10 @@
 }
 
 .lorem {
-  font-family: Georgia, Times, 'Times New Roman', serif;
+  font-family: Georgia, Times, "Times New Roman", serif;
   font-variant-ligatures: common-ligatures;
   margin: -20px;
+  text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
 
@@ -26,7 +27,7 @@
   font-size: 7.1em;
   width: 300px;
   filter: drop-shadow(10px 5px 2px darkgrey);
-  text-shadow: -1px 0 lightgreen, 0 1px indigo, 1px 0 lightgreen, 0 -1px lightgreen;
+  text-shadow: -1px 0 lightgreen, 0 1px indigo, 1px 0 lightgreen,0 -1px lightgreen;
   color: lightskyblue;
 }
 
@@ -38,7 +39,7 @@
   text-align: left;
   border: 1px solid lightslategray;
   margin: 5px;
-  background-color: #90EE90;
+  background-color: #90ee90;
   color: white;
   font-family: sans-serif;
   border-radius: 25px;
@@ -95,7 +96,6 @@ select:hover,
   color: gold;
 }
 
-
 .translate {
   align-items: center;
   justify-content: center;
@@ -104,13 +104,21 @@ select:hover,
   border-radius: 40px;
   width: 400px;
   height: fit-content;
+}
 
+.translate::first-letter {
+  text-transform: uppercase;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .loader {
   border: 8px solid whitesmoke;
   border-top: 8px solid #3498db;
-  /* Blue */
   border-radius: 50%;
   width: 30px;
   height: 30px;
@@ -123,18 +131,7 @@ select:hover,
   0% {
     transform: rotate(0deg);
   }
-
   100% {
     transform: rotate(360deg);
   }
-}
-
-.translate::first-letter {
-  text-transform: uppercase;
-}
-
-.flex {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
