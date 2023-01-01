@@ -13,7 +13,7 @@
 }
 
 .select {
-  margin-top: 30px;
+  margin-top: 20px;
   padding: 5px;
   background-color: lightslategray;
   border-radius: 25px;
@@ -22,7 +22,7 @@
 .map {
   text-align: center;
   align-items: center;
-  margin: -40px auto;
+  margin: -50px auto;
   font-size: 7.1em;
   width: 300px;
   filter: drop-shadow(10px 5px 2px darkgrey);
