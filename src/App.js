@@ -101,17 +101,14 @@ const App = () => {
           <div className="bold"> {post.id}</div>
           <div
             className="title"
-            onClick={(event) => setCurentPost(event.target.innerText)}
-          >
+            onClick={(event) => setCurentPost(event.target.innerText)}>
             {post.title}
           </div>
           <button
             className="buttonX"
             value={post.id}
             onClick={(event) => {
-              removePost(event);
-            }}
-          >
+              removePost(event)}}>
             x
           </button>
         </div>
@@ -120,16 +117,14 @@ const App = () => {
         <button
           disabled={backwardDisabled}
           className="backward"
-          onClick={setBackwardPage}
-        >
+          onClick={setBackwardPage}>
           &#x227C;
         </button>
         {togleTranslatedPost ? <div className="translate">{translatedPost}</div> : <div className="loader">&#x1F5FA;</div>}
         <button
           disabled={forwardDisabled}
           className="forward"
-          onClick={setForwardPage}
-        >
+          onClick={setForwardPage}>
          &#x227D;
         </button>
       </div>
