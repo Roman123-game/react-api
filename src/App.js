@@ -59,9 +59,6 @@ const App = () => {
     });
   }
 
-  function onChaneSelect(e){
-      setLanguage(e.target.value)
-  }
 
  const removePost = useCallback((event) =>{
     console.log(posts, event.target.value);
