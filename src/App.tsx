@@ -18,11 +18,11 @@ const App  : React.FC = () => {
   const [togleTranslatedPost, setTogleTranslatedPost] = useState(false);
 
   useEffect((): ReturnType<EffectCallback> =>{
-    return fetchPost();
+     fetchPost()
   },[page]);
 
   useEffect((): ReturnType<EffectCallback> =>{
-    return translate();
+     translate();
   }, [curentPost]);
 
   async function fetchPost(_limit = 10, _page = page) {
