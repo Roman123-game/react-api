@@ -3,6 +3,9 @@ import axios from "axios";
 import "./App.css";
 import {memo, useState, useEffect, useCallback } from "react";
 
+type EffectCallback = () => (void | any);
+
+
 const App  : React.FC = () => {
   const [posts, setPosts] = useState([]);
   const [language, setLanguage] = useState("en")
@@ -14,11 +17,11 @@ const App  : React.FC = () => {
   const [backwardDisabled, setBackwardDisabled] = useState(false);
   const [togleTranslatedPost, setTogleTranslatedPost] = useState(false);
 
-  useEffect(() => {
+  useEffect((): ReturnType<EffectCallback> =>{
     return fetchPost();
   },[page]);
 
-  useEffect(() => {
+  useEffect((): ReturnType<EffectCallback> =>{
     return translate();
   }, [curentPost]);
 
