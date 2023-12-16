@@ -92,13 +92,20 @@ const App  : React.FC = () => {
     }
   },[page])
 
+  const setNewPost=(event:any)=>{
+    setCurentPost(event.target.value)
+  }
+  const setNewLanguage=(event:any)=>{
+    setLanguage(event.target.value)
+  }
+
   return (
     <div className="App">
       <h3 className="lorem"> Lorem Ipsum Posts</h3>
       <h1 className="map">&#x1F5FA;</h1>
        <select 
        className="select" 
-       onChange={(event:any)=>setLanguage(event.target.value)}>
+       onChange={(event:any)=>setNewLanguage(event)}>
         <option value="en">ENGLISH</option>
         <option value="he">HEBREW</option>
        </select>
@@ -107,14 +114,13 @@ const App  : React.FC = () => {
           <div className="bold"> {post.id}</div>
           <div
             className="title"
-            onClick={(event:any) => setCurentPost(event?.target.innerText)}>
+            onClick={(event:any) => setNewPost(event)}>
             {post.title}
           </div>
           <button
             className="buttonX"
             value={post.id}
-            onClick={(event) => {
-              removePost(event)}}>
+            onClick={(event) => {removePost(event)}}>
             x
           </button>
         </div>
