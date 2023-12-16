@@ -1,9 +1,9 @@
+import React from "react"
 import axios from "axios";
 import "./App.css";
-import { useState, useEffect, useCallback } from "react";
-import {memo} from "react";
+import {memo, useState, useEffect, useCallback } from "react";
 
-const App = () => {
+const App  : React.FC = () => {
   const [posts, setPosts] = useState([]);
   const [language, setLanguage] = useState("en")
   const [curentPost, setCurentPost] = useState("click on post for translation");
@@ -40,7 +40,7 @@ const App = () => {
     encodedParams.append("target_language", language);
     encodedParams.append("text", curentPost);
     
-    const options = {
+    const options : Object = {
       method: 'POST',
       url: 'https://text-translator2.p.rapidapi.com/translate',
       headers: {
@@ -60,10 +60,10 @@ const App = () => {
   }
 
 
- const removePost = useCallback((event) =>{
-    console.log(posts, event.target.value);
+ const removePost = useCallback((e:Event) =>{
+    console.log(posts, e?.target?.value);
     const afterFilter = posts.filter(
-      (value) => value.id !== parseInt(event.target.value)
+      (value: any) => value.id !== parseInt(e?.target?.value)
     );
     setPosts(afterFilter);
   },[posts])
@@ -92,7 +92,7 @@ const App = () => {
     <div className="App">
       <h3 className="lorem"> Lorem Ipsum Posts</h3>
       <h1 className="map">&#x1F5FA;</h1>
-       <select class="select" onChange={(e)=>setLanguage(e.target.value)}>
+       <select className="select" onChange={(e)=>setLanguage(e.target.value)}>
         <option value="en">ENGLISH</option>
         <option value="he">HEBREW</option>
        </select>
@@ -101,7 +101,7 @@ const App = () => {
           <div className="bold"> {post.id}</div>
           <div
             className="title"
-            onClick={(event) => setCurentPost(event.target.innerText)}>
+            onClick={(event) => setCurentPost(e.target.innerText)}>
             {post.title}
           </div>
           <button
