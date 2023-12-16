@@ -60,7 +60,8 @@ const App  : React.FC = () => {
   }
 
 
- const removePost = useCallback((e:Event) =>{
+ const removePost = useCallback((e:any) =>{
+  
     console.log(posts, e?.target?.value);
     const afterFilter = posts.filter(
       (value: any) => value.id !== parseInt(e?.target?.value)
@@ -96,12 +97,12 @@ const App  : React.FC = () => {
         <option value="en">ENGLISH</option>
         <option value="he">HEBREW</option>
        </select>
-      {[...posts].map((post) => (
+      {[...posts].map((post:any) => (
         <div className="id" key={post.id}>
           <div className="bold"> {post.id}</div>
           <div
             className="title"
-            onClick={(event) => setCurentPost(e.target.innerText)}>
+            onClick={(event:any) => setCurentPost(event?.target.innerText)}>
             {post.title}
           </div>
           <button
