@@ -93,7 +93,8 @@ const App  : React.FC = () => {
   },[page])
 
   const setNewPost=(event:any)=>{
-    setCurentPost(event.target.value)
+    console.log(event.target.innerHTML)
+    setCurentPost(event.target.innerHTML)
   }
   const setNewLanguage=(event:any)=>{
     setLanguage(event.target.value)
