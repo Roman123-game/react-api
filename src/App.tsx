@@ -63,11 +63,11 @@ const App  : React.FC = () => {
   }
 
 
- const removePost = useCallback((e:any) =>{
+ const removePost = useCallback((event: any) =>{
   
-    console.log(posts, e?.target?.value);
+    console.log(posts, event?.target?.value);
     const afterFilter = posts.filter(
-      (value: any) => value.id !== parseInt(e?.target?.value)
+      (value: any) => value.id !== parseInt(event?.target?.value)
     );
     setPosts(afterFilter);
   },[posts])
@@ -96,7 +96,9 @@ const App  : React.FC = () => {
     <div className="App">
       <h3 className="lorem"> Lorem Ipsum Posts</h3>
       <h1 className="map">&#x1F5FA;</h1>
-       <select className="select" onChange={(e)=>setLanguage(e.target.value)}>
+       <select 
+       className="select" 
+       onChange={(event:any)=>setLanguage(event.target.value)}>
         <option value="en">ENGLISH</option>
         <option value="he">HEBREW</option>
        </select>
