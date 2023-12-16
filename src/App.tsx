@@ -7,15 +7,15 @@ type EffectCallback = () => (void | any);
 
 
 const App  : React.FC = () => {
-  const [posts, setPosts] = useState([]);
-  const [language, setLanguage] = useState("en")
-  const [curentPost, setCurentPost] = useState("click on post for translation");
-  const [translatedPost, setTranslatedPost] = useState("");
-  const [page, setPage] = useState(1);
-  const [limit] = useState(10);
-  const [forwardDisabled, setForwardDisabled] = useState(false);
-  const [backwardDisabled, setBackwardDisabled] = useState(false);
-  const [togleTranslatedPost, setTogleTranslatedPost] = useState(false);
+  const [posts, setPosts] = useState<any[]>([]);
+  const [language, setLanguage] = useState<string>("en")
+  const [curentPost, setCurentPost] = useState<string>("click on post for translation");
+  const [translatedPost, setTranslatedPost] = useState<string>("");
+  const [page, setPage] = useState<number>(1);
+  const [limit] = useState<number>(10);
+  const [forwardDisabled, setForwardDisabled] = useState<boolean>(false);
+  const [backwardDisabled, setBackwardDisabled] = useState<boolean>(false);
+  const [togleTranslatedPost, setTogleTranslatedPost] = useState<boolean>(false);
 
   useEffect((): ReturnType<EffectCallback> =>{
      fetchPost()
