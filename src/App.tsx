@@ -126,7 +126,7 @@ const App  : React.FC = () => {
           </button>
         </div>
       ))}
-      <div className="flex">
+      <div className="container">
         <button
           disabled={backwardDisabled}
           className="backward"
