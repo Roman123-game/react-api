@@ -4,6 +4,12 @@ import {memo, useState, useEffect, useCallback } from "react";
 
 type EffectCallback = () => (void | any);
 
+interface Post {
+completed: boolean,
+id: number,
+title: string,
+userId: number,
+}
 
 const App  : React.FC = () => {
   const [posts, setPosts] = useState<any[]>([]);
@@ -35,8 +41,8 @@ const App  : React.FC = () => {
       }
     );
     setPosts(responce.data);
-    
   }
+  
   async function translate() {
     const encodedParams = new URLSearchParams();
     encodedParams.append("source_language", "la");
@@ -64,10 +70,8 @@ const App  : React.FC = () => {
 
 
  const removePost = useCallback((event: any) =>{
-  
-    console.log(posts, event?.target?.value);
     const afterFilter = posts.filter(
-      (value: any) => value.id !== parseInt(event?.target?.value)
+      (value: any) => value.id !== parseInt(event.target.value)
     );
     setPosts(afterFilter);
   },[posts])
@@ -109,7 +113,7 @@ const App  : React.FC = () => {
         <option value="en">ENGLISH</option>
         <option value="he">HEBREW</option>
        </select>
-      {[...posts].map((post:any) => (
+      {[...posts].map((post: Post) => (
         <div className="id" key={post.id}>
           <div className="bold"> {post.id}</div>
           <div
@@ -120,7 +124,7 @@ const App  : React.FC = () => {
           <button
             className="buttonX"
             value={post.id}
-            onClick={(event) => {removePost(event)}}>
+            onClick={(event:React.FormEvent<HTMLButtonElement>) => {removePost(event)}}>
             x
           </button>
         </div>
