@@ -71,10 +71,10 @@
   align-self: center;
   width: auto;
   font-size: medium;
-  padding:0 5px;
+  padding:5px;
   border: 1px solid grey;
-  background-color: rgb(255, 135, 88);
-  color: #430147;
+  background-color: lightsalmon;
+  color: white;
   border-radius: 50%;
   margin-left: 10px;
   padding: 0 4px
