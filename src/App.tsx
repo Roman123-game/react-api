@@ -1,4 +1,3 @@
-import React from "react"
 import axios from "axios";
 import "./App.css";
 import {memo, useState, useEffect, useCallback } from "react";
