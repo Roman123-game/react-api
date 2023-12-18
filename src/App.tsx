@@ -42,7 +42,7 @@ const App  : React.FC = () => {
     );
     setPosts(responce.data);
   }
-  
+
   async function translate() {
     const encodedParams = new URLSearchParams();
     encodedParams.append("source_language", "la");

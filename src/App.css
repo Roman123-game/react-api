@@ -68,16 +68,15 @@
 }
 
 .bold {
-  align-self: center;
-  width: auto;
-  font-size: medium;
-  padding:5px;
+  height:16px;
+  font-size: small;
   border: 1px solid grey;
   background-color: lightsalmon;
   color: white;
   border-radius: 50%;
-  margin-left: 10px;
-  padding: 0 4px
+  padding: 2px 8px;
+  text-align:left;
+  letter-spacing: -2px;
 }
 
 .forward,
