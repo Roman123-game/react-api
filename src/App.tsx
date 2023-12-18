@@ -35,6 +35,7 @@ const App  : React.FC = () => {
       }
     );
     setPosts(responce.data);
+    
   }
   async function translate() {
     const encodedParams = new URLSearchParams();
@@ -92,7 +93,6 @@ const App  : React.FC = () => {
   },[page])
 
   const setNewPost=(event:any)=>{
-    console.log(event.target.innerHTML)
     setCurentPost(event.target.innerHTML)
   }
   const setNewLanguage=(event:any)=>{
@@ -105,7 +105,7 @@ const App  : React.FC = () => {
       <h1 className="map">&#x1F5FA;</h1>
        <select 
        className="select" 
-       onChange={(event:any)=>setNewLanguage(event)}>
+       onChange={(event: React.FormEvent<HTMLSelectElement>)=>setNewLanguage(event)}>
         <option value="en">ENGLISH</option>
         <option value="he">HEBREW</option>
        </select>
@@ -114,7 +114,7 @@ const App  : React.FC = () => {
           <div className="bold"> {post.id}</div>
           <div
             className="title"
-            onClick={(event:any) => setNewPost(event)}>
+            onClick={(event: React.MouseEvent<HTMLElement>) => setNewPost(event)}>
             {post.title}
           </div>
           <button
@@ -132,7 +132,9 @@ const App  : React.FC = () => {
           onClick={setBackwardPage}>
           &#x227C;
         </button>
-        {togleTranslatedPost ? <div className="translate">{translatedPost}</div> : <div className="loader">&#x1F5FA;</div>}
+        {togleTranslatedPost 
+        ? <div className="translate">{translatedPost}</div> 
+        : <div className="loader">&#x1F5FA;</div>}
         <button
           disabled={forwardDisabled}
           className="forward"
