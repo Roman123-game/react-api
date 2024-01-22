@@ -1,6 +1,6 @@
 import axios from "axios";
 import "./App.css";
-import {memo, useState, useEffect, useCallback } from "react";
+import {React,memo, useState, useEffect, useCallback } from "react";
 
 type EffectCallback = () => (void | any);
 
@@ -60,10 +60,10 @@ const App  : React.FC = () => {
       data: encodedParams
     };
     
-   await axios.request(options).then(function (response) {
+   await axios.request(options).then(function (response:any) {
     setTranslatedPost(response.data.data.translatedText);
     setTogleTranslatedPost(true);
-    }).catch((error)=> {
+    }).catch((error:any)=> {
       console.error(error);
     });
   }
