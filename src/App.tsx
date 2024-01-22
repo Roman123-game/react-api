@@ -1,34 +1,34 @@
 import axios from "axios";
 import "./App.css";
-import { React, memo, useState, useEffect, useCallback } from "react";
+import {React,memo, useState, useEffect, useCallback } from "react";
 
 type EffectCallback = () => (void | any);
 
 interface Post {
-  completed: boolean,
-  id: number,
-  title: string,
-  userId: number,
+completed: boolean,
+id: number,
+title: string,
+userId: number,
 }
 
-const App: React.FC = () => {
+const App  : React.FC = () => {
   const [posts, setPosts] = useState<any[]>([]);
   const [language, setLanguage] = useState<string>("en")
-  const [curentPost, setCurentPost] = useState<string>("click on post for translation");
+  const [currentPost, setCurrentPost] = useState<string>("click on post for translation");
   const [translatedPost, setTranslatedPost] = useState<string>("");
   const [page, setPage] = useState<number>(1);
   const [limit] = useState<number>(10);
   const [forwardDisabled, setForwardDisabled] = useState<boolean>(false);
   const [backwardDisabled, setBackwardDisabled] = useState<boolean>(false);
-  const [togleTranslatedPost, setTogleTranslatedPost] = useState<boolean>(false);
+  const [toggleTranslatedPost, setToggleTranslatedPost] = useState<boolean>(false);
 
-  useEffect((): ReturnType<EffectCallback> => {
-    fetchPost()
-  }, [page]);
+  useEffect((): ReturnType<EffectCallback> =>{
+     fetchPost()
+  },[page]);
 
-  useEffect((): ReturnType<EffectCallback> => {
-    translate();
-  }, [curentPost]);
+  useEffect((): ReturnType<EffectCallback> =>{
+     translate();
+  }, [currentPost]);
 
   async function fetchPost(_limit = 10, _page = page) {
     const responce = await axios.get(
@@ -47,9 +47,9 @@ const App: React.FC = () => {
     const encodedParams = new URLSearchParams();
     encodedParams.append("source_language", "la");
     encodedParams.append("target_language", language);
-    encodedParams.append("text", curentPost);
-
-    const options: Object = {
+    encodedParams.append("text", currentPost);
+    
+    const options : Object = {
       method: 'POST',
       url: 'https://text-translator2.p.rapidapi.com/translate',
       headers: {
@@ -59,24 +59,24 @@ const App: React.FC = () => {
       },
       data: encodedParams
     };
-
-    await axios.request(options).then(function (response: any) {
-      setTranslatedPost(response.data.data.translatedText);
-      setTogleTranslatedPost(true);
-    }).catch((error: any) => {
+    
+   await axios.request(options).then(function (response:any) {
+    setTranslatedPost(response.data.data.translatedText);
+    setToggleTranslatedPost(true);
+    }).catch((error:any)=> {
       console.error(error);
     });
   }
 
 
-  const removePost = useCallback((event: any) => {
+ const removePost = useCallback((event: any) =>{
     const afterFilter = posts.filter(
       (value: any) => value.id !== parseInt(event.target.value)
     );
     setPosts(afterFilter);
-  }, [posts])
+  },[posts])
 
-  const setForwardPage = useCallback(() => {
+  const setForwardPage = useCallback(()=> {
     if (page >= 20) {
       setForwardDisabled(true);
     } else {
@@ -84,9 +84,9 @@ const App: React.FC = () => {
       setBackwardDisabled(false);
       setPage(page + 1);
     }
-  }, [page])
+  },[page])
 
-  const setBackwardPage = useCallback(() => {
+  const  setBackwardPage = useCallback(() => {
     if (page <= 1) {
       setBackwardDisabled(true);
     } else {
@@ -94,12 +94,12 @@ const App: React.FC = () => {
       setBackwardDisabled(false);
       setPage(page - 1);
     }
-  }, [page])
+  },[page])
 
-  const setNewPost = (event: any) => {
-    setCurentPost(event.target.innerHTML)
+  const setNewPost=(event:any)=>{
+    setCurrentPost(event.target.innerHTML)
   }
-  const setNewLanguage = (event: any) => {
+  const setNewLanguage=(event:any)=>{
     setLanguage(event.target.value)
   }
 
@@ -107,12 +107,12 @@ const App: React.FC = () => {
     <div className="App">
       <h3 className="lorem"> Lorem Ipsum Posts</h3>
       <h1 className="map">&#x1F5FA;</h1>
-      <select
-        className="select"
-        onChange={(event: React.FormEvent<HTMLSelectElement>) => setNewLanguage(event)}>
+       <select 
+       className="select" 
+       onChange={(event: React.FormEvent<HTMLSelectElement>)=>setNewLanguage(event)}>
         <option value="en">ENGLISH</option>
         <option value="he">HEBREW</option>
-      </select>
+       </select>
       {[...posts].map((post: Post) => (
         <div className="id" key={post.id}>
           <div className="bold"> {post.id}</div>
@@ -124,7 +124,7 @@ const App: React.FC = () => {
           <button
             className="buttonX"
             value={post.id}
-            onClick={(event: React.FormEvent<HTMLButtonElement>) => { removePost(event) }}>
+            onClick={(event:React.FormEvent<HTMLButtonElement>) => {removePost(event)}}>
             x
           </button>
         </div>
@@ -136,14 +136,14 @@ const App: React.FC = () => {
           onClick={setBackwardPage}>
           &#x227C;
         </button>
-        {togleTranslatedPost
-          ? <div className="translate">{translatedPost}</div>
-          : <div className="loader">&#x1F5FA;</div>}
+        {toggleTranslatedPost 
+        ? <div className="translate">{translatedPost}</div> 
+        : <div className="loader">&#x1F5FA;</div>}
         <button
           disabled={forwardDisabled}
           className="forward"
           onClick={setForwardPage}>
-          &#x227D;
+         &#x227D;
         </button>
       </div>
     </div>
