@@ -1,6 +1,7 @@
 import axios from "axios";
 import "./App.css";
-import {React,memo, useState, useEffect, useCallback } from "react";
+import * as React  from "react";
+import {memo, useState, useEffect, useCallback } from "react";
 
 type EffectCallback = () => (void | any);
 
@@ -17,7 +18,7 @@ const App  : React.FC = () => {
   const [currentPost, setCurrentPost] = useState<string>("click on post for translation");
   const [translatedPost, setTranslatedPost] = useState<string>("");
   const [page, setPage] = useState<number>(1);
-  const [limit] = useState<number>(10);
+  const limit :number =10;
   const [forwardDisabled, setForwardDisabled] = useState<boolean>(false);
   const [backwardDisabled, setBackwardDisabled] = useState<boolean>(false);
   const [toggleTranslatedPost, setToggleTranslatedPost] = useState<boolean>(false);
