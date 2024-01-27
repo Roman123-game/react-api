@@ -3,12 +3,20 @@
   text-align: center;
   color: black;
   font-size: x-large;
+  background-image: url("../public/wallpaper.png");
+  background-repeat: repeat;
 }
 
 .lorem {
   font-family: Georgia, Times, "Times New Roman", serif;
   font-variant-ligatures: common-ligatures;
-  margin: -20px;
+  margin:auto;
+  backdrop-filter: blur(6px);
+  width:300px;
+  border-radius: 15px;
+  border :  1px solid
+
+
 
 }
 
@@ -35,15 +43,15 @@
   align-items: center;
   justify-content: space-around;
   font-size: 16px;
+  margin: 1px;
   text-align: left;
   border: 1px solid lightslategray;
-  margin: 5px ;
   background-color: #90ee90;
-  color: white;
+  color: black;
   font-family: sans-serif;
   border-radius: 25px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding:5px 
+  padding:5px 10px;
 }
 
 .title {
@@ -106,6 +114,9 @@ select:hover,
   height: fit-content;
   padding:2px 20px;
   text-wrap:balance;
+  margin: 20px;
+ backdrop-filter: blur(6px);
+
   
 }
 
